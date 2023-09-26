@@ -61,9 +61,6 @@ app.get('/summary',
 })
 
   app.post('/', 
-  {
-    preHandler: [checkSessionIdExists],
-  },
   async (request, reply) => {
 
     const createTransactionBodySchema = z.object({

@@ -1,7 +1,7 @@
 {
   "name": "02-api-rest-nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "[x] O usuário deve poder criar uma nova transação; [ ] O usuário deve poder obter um resumo da sua conta; [x] O usuário deve poder listar todas transações que já ocorreram; [x] O usuário deve poder visualizar uma transação única;",
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
@@ -16,9 +16,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.6.0",
+    "@types/node": "^20.6.5",
+    "@types/supertest": "^2.0.13",
     "supertest": "^6.3.3",
-    "tsx": "^3.12.10",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^3.13.0",
     "typescript": "^5.2.2",
     "vitest": "^0.34.5"
   },
@@ -27,7 +29,19 @@
     "dotenv": "^16.3.1",
     "fastify": "^4.23.2",
     "knex": "^2.5.1",
+    "nodemon": "^3.0.1",
     "sqlite3": "^5.1.6",
     "zod": "^3.22.2"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiagoralves/api-rest-nodejs-ignite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tiagoralves/api-rest-nodejs-ignite/issues"
+  },
+  "homepage": "https://github.com/tiagoralves/api-rest-nodejs-ignite#readme"
 }
