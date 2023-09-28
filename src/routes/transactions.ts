@@ -38,11 +38,11 @@ export async function transactionRoutes(app: FastifyInstance) {
   const transaction = await knex('transactions')
   .where({
     session_id: sessionId,
-    id
+    id,
   })
   .first()
 
-  return transaction
+  return { transaction }
 })
 
 app.get('/summary',
@@ -54,11 +54,12 @@ app.get('/summary',
 
   const summary = await knex('transactions')
   .where('session_id', sessionId)
-  .sum('amount', {as: 'amount'})
+  .sum('amount', { as: 'amount' })
   .first()
 
   return { summary }
-})
+},
+)
 
   app.post('/', 
   async (request, reply) => {
