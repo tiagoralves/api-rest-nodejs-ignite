@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "[x] O usuário deve poder criar uma nova transação; [ ] O usuário deve poder obter um resumo da sua conta; [x] O usuário deve poder listar todas transações que já ocorreram; [x] O usuário deve poder visualizar uma transação única;",
   "main": "index.js",
+  "engines": {
+    "node": "==18"
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
@@ -15,6 +18,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@fastify/cookie": "^9.0.4",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.23.2",
+    "knex": "^2.5.1",
+    "nodemon": "^3.0.1",
+    "pg": "^8.11.3",
+    "zod": "^3.22.2"
+  },
   "devDependencies": {
     "@types/node": "^20.6.5",
     "@types/supertest": "^2.0.13",
@@ -23,16 +35,8 @@
     "tsup": "^7.2.0",
     "tsx": "^3.13.0",
     "typescript": "^5.2.2",
+    "sqlite3": "^5.1.6",    
     "vitest": "^0.34.5"
-  },
-  "dependencies": {
-    "@fastify/cookie": "^9.0.4",
-    "dotenv": "^16.3.1",
-    "fastify": "^4.23.2",
-    "knex": "^2.5.1",
-    "nodemon": "^3.0.1",
-    "sqlite3": "^5.1.6",
-    "zod": "^3.22.2"
   },
   "directories": {
     "test": "test"
